@@ -1,7 +1,10 @@
 const express = require("express");
 const https = require("https");
+const { dirname } = require("path");
 
 const app = express();
+
+app.use(express.static(__dirname + "/public"));
 /* app.use(bodyParser.urlencoded({extended:true}));    ---again deprecated use following line instead */
 app.use(express.urlencoded({extended:true}));
 
